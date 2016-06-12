@@ -1,0 +1,101 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            #first{
+                width:20%;
+                margin-left: 40%;
+                    border:2px solid #000000;
+                    margin-top: 13%
+            }
+            #name{
+                text-align: center;
+            }
+            #txtbox{
+                margin-left: 20%
+            }
+            #buttons{
+                margin-left: 40%
+            }
+        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+            function readElement(d){
+         var e=parseInt(document.getElementById("read").value);
+          
+          var a;
+    switch(d) 
+    
+    {
+   case 1:
+   a=Add(e);
+   break;
+   case 2:
+   a=Sub(e);
+   break;
+   case 3:
+   a=Mul(e);
+   break;
+   case 4:
+   a=Div(e);
+   break;
+   } 
+   alert("Result is"+a)
+}
+            var b=0;
+            function Add(a){
+                b=a;
+                var c =a+b;
+            return c;}
+        function Sub(a){
+            b=a;
+            var c =a-b;
+            return c;}
+        function Mul(a){
+            b=a;
+            var c =a*b;
+            return c;}
+        function Div(a){
+        if(b==0){
+            alert("Division is not Possible")
+            a="can't find";
+        }  
+        else {
+            
+        b=a;
+        var c =a/b;
+            return c;
+        }
+        }
+            </script>
+            <input type="text" name="fno" value="" id="fno" />
+            <input type="text" name="lno" value="" id="lno"/>
+            
+            <div id="first">
+                <div id="name">
+                  <br/>  Calculator 
+                </div>
+                <br/><br/>
+                <div id="txtbox">
+                    <input type="text" name="read" id="element" value="0" />
+                </div>
+                <br/><br/>
+                <div id="buttons">
+                 <input type="button" value="+"  onclick="readElement(1)"/>
+                <input type="button" value="-"  onclick="readElement(2)"/><br/><br/>
+                <input type="button" value="*"  onclick="readElement(3)"/>
+                <input type="button" value="/"  onclick="readElement(4)"/> 
+                 <input type="button" value="="  onclick="readElement(5)"/> 
+                </div>
+                <br/><br/>
+            </div>
+    </body>
+</html>
