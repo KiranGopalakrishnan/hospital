@@ -59,20 +59,18 @@ and open the template in the editor.
              document.getElementById("element").value=b;
             return b;}
         function Mul(a){
-            b=a;
-            var c =a*b;
-            return c;}
+             b =a*b;
+             document.getElementById("element").value=b;
+            return b;}
         function Div(a){
-        if(b==0){
-            alert("Division is not Possible")
+         if(a==0){
+            alert("Division is not Possible");
             a="can't find";
         }  
         else {
-            
-        b=a;
-        var c =a/b;
-            return c;
-        }
+            b=b/a;
+            document.getElementById("element").value=b;
+            return b;
         }
             </script>
             <input type="text" name="fno" value="" id="fno" />
