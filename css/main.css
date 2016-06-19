@@ -73,7 +73,7 @@ body,html{
 .contents p{
     font-family: 'Roboto', sans-serif;
     color: #000;
-    font-style: 300;
+    font-weight: 300;
 }
 .contents h1{
     font-family: 'Roboto', sans-serif;
@@ -86,3 +86,12 @@ body,html{
     float: left;
     padding: 3%;
 }
+.bggreen{
+    background: #2ecc71;
+}
+.bggreen .h1{
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.contents .button
