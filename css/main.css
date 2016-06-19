@@ -85,14 +85,14 @@ body,html{
 .contents .im {
     float: left;
     padding: 3%;
-    -webkit-transition: all 2s ease;
+    /*-webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
     -ms-transition: all 2s ease;
-    transition: all 2s ease;
+    transition: all 2s ease;*/
 }
-.im:hover{
+/*.im:hover{
     padding: 5%;
-}
+}*/
 .bggreen{
     background: #2ecc71;
     text-align: center;
