@@ -9,10 +9,15 @@ and open the template in the editor.
         <title>Hospital</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
         <link href='css/main.css' rel='stylesheet' type='text/css'>
+        <link href="css/jquery.bxslider.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.js"> </script>
         <script>
-       //alert("Hiiiiii");
+            $(document).ready(function(){
+                 $('.bxslider').bxSlider();
+            });
         </script>
     </head>
     <body>
@@ -28,6 +33,21 @@ and open the template in the editor.
             </div>
             <div class="center_content">
                 <div class="slide">
+                    <ul class="bxslider">
+                        <li><img src="images/slide1.jpg" /></li>
+                        <li><img src="images/slide2.jpg" /></li>
+                        <li><img src="images/slide1.jpg" /></li>
+                    </ul>
+                </div>
+                <div class="contents bgyellow">
+                    <h1> Why Us ? </h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since unknown printer.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since unknown printer.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since unknown printer.</p>
+                </div>
+                <div class="contents">
+                    <img src="images/dr-1.jpg" class="im">
+                    <img src="images/dr-2.jpg" class="im">
+                    <img src="images/dr-3.jpg" class="im">
+                    <img src="images/dr-4.jpg" class="im">
                 </div>
             </div>
         </div>

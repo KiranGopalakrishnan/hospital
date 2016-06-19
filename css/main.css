@@ -17,7 +17,7 @@ body,html{
 }
 .header{
     float: left;
-    width:90%;
+    width:98.5%;
     padding: 10px;
     border-bottom: solid 1px #e5e5e5;
 }
@@ -51,3 +51,38 @@ body,html{
     color:#fff;
 }
 
+/* center content begins */
+
+.center_content{
+    float: left;
+    width:100%;
+    background: #f5f5f5;
+}
+.slide{
+    width: 100%;
+    float: left;
+}
+.bx-wrapper{
+    height: 450px;
+}
+.contents{
+    float: left;
+    width: 90%;
+    padding: 5%;
+}
+.contents p{
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-style: 300;
+}
+.contents h1{
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+.contents{
+    background: #f5f5f5;
+}
+.contents .im{
+    float: left;
+    padding: 3%;
+}
