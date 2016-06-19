@@ -88,10 +88,22 @@ body,html{
 }
 .bggreen{
     background: #2ecc71;
+    text-align: center;
 }
 .bggreen .h1{
-    color:#fff;
+    color:#fff !important;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
-.contents .button
+.contents .button{
+    float: left;
+    padding: 10px;
+    background: #fff;
+    color: #29b664;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight:100;
+    margin-left: 45%;
+    margin-top: 20px;
+    cursor: pointer;
+}
