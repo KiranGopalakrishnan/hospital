@@ -7,17 +7,47 @@ and open the template in the editor.
     Created on : 19-Jun-2016, 8:34:40 AM
     Author     : 1691618
 */
+body,html{
+    margin: 0px;
+}
 .main_wrapper{
     float: left;
     width:100%;
-    background: #f5f5f5;s
+    background: #f5f5f5;
 }
 .header{
     float: left;
     width:90%;
     padding: 10px;
+    border-bottom: solid 1px #e5e5e5;
+}
+.header img{
+    float: left;
+}
+.header .title{
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 25px;
 }
 .menu{
-    float: left;
+    float: right;
+    margin-top: 1%;
+}
+.menu span{
+    font-style: bold;
+    //background: #f39c12;
+    color:#666;
+    font-family: 'Roboto', sans-serif;
+    padding: 7px;
+    padding-left: 15px;
+    padding-right: 10px;
+    transition: background 2s;
+}
+.menu span:hover{
+    background:#d35400;
+    cursor: pointer;
+    color:#fff;
 }
 

@@ -1,98 +1,35 @@
+<!DOCTYPE html>
 <!--
-To change this template, choose Tools | Templates
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<!DOCTYPE html>
 <html>
     <head>
-        <title></title>
-        <style>
-            #first{
-                width:20%;
-                margin-left: 40%;
-                    border:2px solid #000000;
-                    margin-top: 13%
-            }
-            #name{
-                text-align: center;
-            }
-            #txtbox{
-                margin-left: 20%
-            }
-            #buttons{
-                margin-left: 40%
-            }
-        </style>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Hospital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+        <link href='css/main.css' rel='stylesheet' type='text/css'>
+        <script>
+       //alert("Hiiiiii");
+        </script>
     </head>
-    
     <body>
-        <script type="text/javascript">
-          var b=0;
-            function readElement(d){
-         var e=parseInt(document.getElementById("element").value);
-    switch(d) 
-    
-    {
-   case 1:
-   a=Add(e);
-   break;
-   case 2:
-   a=Sub(e);
-   break;
-   case 3:
-   a=Mul(e);
-   break;
-   case 4:
-   a=Div(e);
-   break;
-   } 
-   //alert("Result is"+a)
-}
-          
-            function Add(a){
-                b=a+b;
-        document.getElementById("element").value=b;
-            return b;}
-        function Sub(a){
-           b =a-b;
-             document.getElementById("element").value=b;
-            return b;}
-        function Mul(a){
-             b =a*b;
-             document.getElementById("element").value=b;
-            return b;}
-        function Div(a){
-         if(a==0){
-            alert("Division is not Possible");
-            a="can't find";
-        }  
-        else {
-            b=b/a;
-            document.getElementById("element").value=b;
-            return b;
-        }
-            </script>
-            <!--    <input type="text" name="fno" value="" id="fno" />
-            <input type="text" name="lno" value="" id="lno"/>   -->
-            
-            <div id="first">
-                <div id="name">
-                  <br/>  Calculator 
+        <div class="main_wrapper">
+            <div class="header">
+                <img src="images/logo.png" height="60" />
+                <span class="title">Hospital</span>
+                <div class="menu">
+                    <span>Home</span>
+                    <span>about</span>
+                    <span>Book Appointment</span>
                 </div>
-                <br/><br/>
-                <div id="txtbox">
-                    <input type="text" name="read" id="element" value="0" />
-                </div>
-                <br/><br/>
-                <div id="buttons">
-                 <input type="button" value="+"  onclick="readElement(1)"/>
-                <input type="button" value="-"  onclick="readElement(2)"/><br/><br/>
-                <input type="button" value="*"  onclick="readElement(3)"/>
-                <input type="button" value="/"  onclick="readElement(4)"/> 
-                 <input type="button" value="="  onclick="readElement(5)"/> 
-                </div>
-                <br/><br/>
             </div>
+            <div class="center_content">
+                <div class="slide">
+                </div>
+            </div>
+        </div>
     </body>
 </html>
