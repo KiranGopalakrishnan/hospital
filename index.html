@@ -48,7 +48,7 @@ and open the template in the editor.
 				 $(".loggedIn").hide();
                 var lu=localStorage.getItem("login");
 				console.log(lu);
-				if(lu!="0"){
+				if(lu=="1"){
 				$(".loggedIn span").html(localStorage.getItem("username"));
 					$(".loggedIn").slideDown(2000);
 				}
