@@ -1,70 +1,95 @@
 <!doctype html>
 <html>
     <head>
+	<title>Book Appointment</title>
         <style type="text/css">
-        body{background-color:black}
+        body{background-color:transparent;
+    font-family: 'Roboto', sans-serif;}
  #header {
-    background-color:black;
+    background-color:transparent;
     color:wbr;
     text-align:center;
     padding:5px;
 }
+form{
+    background-color: #2ecc71;
+    color: rgb(255, 255, 255);}
+	
 div {
-  
-    background-color: rgb(0, 191, 255);
-    color: rgb(255, 255, 255);
-    padding: 35px;
+    padding: 20px;
 }
-            body {font-family:Arial, Sans-Serif;}
+input{
+	padding:10px;
+	background:#FFF;
+	border:solid 1px #fff;
+}
              
     
-            #container {width:700px; margin:10px auto;}
+
+            #container {width:30%; margin:0 auto;}
  
           
-            form label {display:inline-block; width:300px;}
+            form label {display:inline-block; width:140px;}
  
            
             form input[type="text"],
             form input[type="password"],
-            form input[type="email"] {width:160px;}
+            form input[type="email"], form input[type="date"], form input[type="number"] {width:95%;}
  
             form .line {clear:both;}
-            form .line.submit {text-align:center;background-color: black;padding: 20px; font-size:20px;
-    margin: 10px 15px;}
+            form .line.submit {text-align:center;background-color: transparent;padding: 15px 32px; font-size: 16px;
+    margin: 4px 2px;}
  
         </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <scirpt>
-            $(".sub").click(function(){
-                localStorage.setItem("username", $("#username").val()); 
-                localStorage.setItem("password", $("#password").val()); 
-                alert("Registered Succesfull");
-            });  
-        </script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+        <link href='css/main.css' rel='stylesheet' type='text/css'>
+		
             
-        </scirpt>
     </head>
     <body>
-        <div id="container">
+	<div class="header">
+                <img src="images/logo.png" height="60" alt = " " />
+                <span class="title">Hospital</span>
+                <div class="menu">
+                	<span><a href="index.html">Home</a></span>
+                	<span><a href="registration.html"  style="text-decoration:none">Book Appointment</a></span>
+                        <a href="About_us.html" style="text-decoration:none" ><span>About us</span></a>
+                            <a href="login.html" style="text-decoration:none"><span>Login</span></a>
+                </div>
+            </div>
+			<br>
+			<br>
+        <div id="container" style="
+	margin-top:8%;">
             <form>
+			
                 <div id="header">
-<h1>Registeration</h1>
+<h1>Book Appointment</h1>
 </div>
-                <div class="line"><label for="username">Username *: </label><input type="text" id="username" /></div>
-                <div class="line"><label for="pwd">Password *: </label><input type="password" id="pwd" /></div>
-                <!-- You may want to consider adding a "confirm" password box also -->
-                <div class="line"><label for="surname">Surname *: </label><input type="text" id="surname" /></div>
-                <div class="line"><label for="other_names">Other Names *: </label><input type="text" id="names" /></div>
-                <div class="line"><label for="dob">Date of Birth *: </label><input type="text" id="dob" /></div>
-                <div class="line"><label for="email">Email *: </label><input type="email" id="email" /></div>
-                <!-- Valid input types: http://www.w3schools.com/html5/html5_form_input_types.asp -->
-                <div class="line"><label for="tel">Telephone: </label><input type="text" id="tel" /></div>
-                <div class="line"><label for="add">Address *: </label><input type="text" id="add" /></div>
-                <div class="line"><label for="ptc">Post Code *: </label><input type="text" id="ptc" /></div>
-                <div class="line submit" ><input type="submit" value="Submit" class="sub" /></div>
+                <div class="line"><label for="username">Username *: </label><input type="text" id="username" required /></div>
+                <div class="line"><label for="pwd">Password *: </label><input type="password" id="pwd" required /></div>
+                <div class="line"><label for="surname">Surname *: </label><input type="text" id="surname" required /></div>
+                <div class="line"><label for="names">Other Names *: </label><input type="text" id="names" required /></div>
+                <div class="line"><label for="dob">Date of Birth *: </label><input type="date" id="dob" required /></div>
+                <div class="line"><label for="email">Email *: </label><input type="email" id="email" required /></div>
+                <div class="line"><label for="tel">Telephone: </label><input type="number" id="tel" required /></div>
+                <div class="line"><label for="add">Address *: </label><input type="text" id="add" required /></div>
+                <div class="line"><label for="ptc">Post Code *: </label><input type="text" id="ptc" required /></div>
+                <div class="line submit"><input type="submit" class="sub" value="Submit"  /></div>
  
             
             </form>
         </div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+		$(".sub").on("click", function (e) {
+    e.preventDefault();     localStorage.setItem("username", $("#username").val()); 
+                localStorage.setItem("password", $("#pwd").val()); 
+				localStorage.setItem("email", $("#email").val()); 
+				localStorage.setItem("login","1"); 
+                alert("Registered Succesfull");
+				window.location="index.html";
+            });  
+        </script>
     </body>
 </html>
