@@ -5,21 +5,48 @@
   <title>Login Form</title>
   <link rel="stylesheet" href="style.css">
   
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+        <link href='css/main.css' rel='stylesheet' type='text/css'>
+		<style>
+			.confirm{
+				padding:2%;
+				color:#fff;
+				font-family:'Robot',Sans-serif;
+				font-size:24px;
+				font-family: 'Roboto', sans-serif;
+				width:96%;
+				text-align:center;
+				margin-bottom:5%;
+			}
+		</style>
+		
 </head>
-<body>
-  <section class="container">
+<body><div class="header">
+                <img src="images/logo.png" height="60" alt = " " />
+                <span class="title">Hospital</span>
+                <div class="menu">
+                	<span><a href="index.html">Home</a></span>
+                	<span><a href="registration.html"  style="text-decoration:none">Book Appointment</a></span>
+                        <a href="About_us.html" style="text-decoration:none" ><span>About us</span></a>
+                            <a href="login.html" style="text-decoration:none"><span>Login</span></a>
+                </div>
+            </div>
+			<br>
+			<br>
+  <section class="container" style="margin-top:20%;">
+  <div class="confirm">You have successfully Loogged In</div>
     <div class="login">
       <h1>Login</h1>
-      <form method="post" action="db.php">
-        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-        <p><input type="password" name="password" value="" placeholder="Password"></p>
+      <form method="post">
+        <p><input type="text" name="login" id="username" value="" placeholder="Username or Email"></p>
+        <p><input type="password" name="password" id="password" value="" placeholder="Password"></p>
         <p class="remember_me">
           <label>
             <input type="checkbox" name="remember_me" id="remember_me">
             Remember me on this computer
           </label>
         </p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+        <p class="submit"><input type="submit" class="log" name="commit" value="Login"></p>
       </form>
     </div>
 
@@ -27,7 +54,28 @@
       <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
     </div>
   </section>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+		$(".confirm").hide();
+            $(".log").on("click", function (e) {
+    e.preventDefault();
+                var lu=localStorage.getItem("username"); 
+                var ps=localStorage.getItem("password");
+					var usr,pass;
+					usr=$("#username").val();
+					pass=$("#password").val();
+					if(lu==usr&&ps==pass){
+					localStorage.setItem("login","1");
+						$(".confirm").html("Login Successfull !");
+						$(".confirm").slideDown(2000);
+						setTimeout(function(){ window.location="index.html"; },3000);
+					}else{
+						
+						$(".confirm").html("User Not Found !");
+						$(".confirm").slideDown(2000);
+					}
+            });  
+        </script>
  
 </body>
 </html>
