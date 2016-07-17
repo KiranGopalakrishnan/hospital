@@ -108,7 +108,7 @@ table {
 body {
   font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
   color: #404040;
-  background: #0ca3d2;
+  background: #2ecc71;
 }
 
 .container {
@@ -136,6 +136,10 @@ body {
   z-index: -1;
   background: rgba(0, 0, 0, 0.08);
   border-radius: 4px;
+}
+.sub{
+	padding:20px;
+	background:#fff;
 }
 .login h1 {
   margin: -20px -20px 21px;
